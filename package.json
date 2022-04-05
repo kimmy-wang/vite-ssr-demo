@@ -1,0 +1,30 @@
+{
+  "name": "vue3-lerna-ssr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all --parallel build:*",
+    "build:vite-react": "yarn workspace vite-react build",
+    "build:vite-vue": "yarn workspace vite-vue build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "4.17.3",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
