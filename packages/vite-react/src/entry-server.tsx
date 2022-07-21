@@ -1,11 +1,10 @@
 import ReactDOMServer from 'react-dom/server'
-import {StaticContext} from "react-router"
-import { StaticRouter } from 'react-router-dom'
+import { StaticRouter } from 'react-router-dom/server'
 import { App } from './App'
 
-export function render(url: string, context: StaticContext) {
+export function render(url: string) {
   return ReactDOMServer.renderToString(
-    <StaticRouter location={url} context={context}>
+    <StaticRouter location={url}>
       <App />
     </StaticRouter>
   )

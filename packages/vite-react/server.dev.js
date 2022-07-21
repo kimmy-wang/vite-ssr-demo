@@ -37,7 +37,7 @@ async function createServer(
       template = await vite.transformIndexHtml(url, template)
       const render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render
 
-      const appHtml = await render(url, {})
+      const appHtml = await render(url)
 
       const html = template.replace(`<!--ssr-outlet-->`, appHtml)
 

@@ -25,7 +25,7 @@ app.use('*', async (req, res) => {
     const template = fs.readFileSync(resolve('dist/vite-react/client/index.html'), 'utf-8')
     const render = require('./dist/vite-react/server/entry-server.js').render
 
-    const appHtml = await render(url, manifest)
+    const appHtml = await render(url)
 
     const html = template
       .replace(`<!--ssr-outlet-->`, appHtml)
