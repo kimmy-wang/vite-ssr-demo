@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { App } from './App'
 
 ReactDOM.hydrateRoot(
-  document.getElementById('app')!,
+  document.getElementById('app') as HTMLElement,
   <BrowserRouter>
     <App />
   </BrowserRouter>
