@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "node server.dev.js",
-    "build": "rimraf ../../dist/vite-react/* && vue-tsc --noEmit && yarn build:client && yarn build:server",
+    "build": "rimraf ../../dist/vite-react/* && yarn build:client && yarn build:server",
     "build:client": "vite build --ssrManifest --outDir ../../dist/vite-react/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir ../../dist/vite-react/server",
     "preview": "vite preview"
